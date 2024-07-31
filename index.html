@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string method</title>
+    <style>
+        body{
+            background: aquamarine;
+        }
+        textarea{
+            height: 200px;
+            width: 500px;
+            font-size: 22px;
+            font-weight: bolder;
+            text-align: center;
+            margin-left: 150px;
+            margin-top: 30px;
+            border-radius: 4px;
+            border: none;
+            box-shadow: 0px 0px 10px black;
+        }
+        .button{
+            margin-top: 50px;
+            margin-left: 220px;
+        }
+        button{
+            height: 40px;
+            width: 150px;
+            margin-left: 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bolder;
+            background: aqua;
+            font-size: 20px;
+            font-weight: bold;
+            filter: drop-shadow(0 3px 0 black);
+        }
+        button:hover{
+            background: rgb(0, 255, 187);
+            transition:  .5s  ease-in-out; 
+        }
+        button:not(:hover){
+            background: aqua;
+            transform: scale(.9);
+            color: rgb(6, 40, 70);
+        }
+        h1{
+           
+            font-weight: bolder;
+            font-size: 35px;
+            text-align: center;
+            animation:  scale 1s infinite ease-in-out;
+        }
+        @keyframes scale{
+            25%{
+                transform: scaleX(1.1);
+                color: blue;
+            }
+            50%{
+                transform: scaleX(0.9);
+                color: red;
+            }
+            75%{
+                transform: scaleX(1.1);
+                color: rgb(225, 24, 24);
+            }
+            100%{
+                transform: scaleX(0.9);
+                color: rgb(226, 128, 43);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Change Text Into</h1>
+    <textarea placeholder="enter text here"></textarea>
+    <div class="button">
+    <button id="upr">to-upper</button>
+    <button id="lwr">to-lower</button>
+    </div>
+    <script>
+     let text = document.querySelector("textarea");
+     let upr = document.querySelector("#upr");
+     let lwr = document.querySelector("#lwr");
+     
+     upr.addEventListener("click",()=>{
+        text.value=text.value.toUpperCase();
+     });
+
+     lwr.addEventListener("click",()=>{
+        text.value=text.value.toLowerCase();
+        //text.style.fontWeight="bold";
+
+     });
+
+    </script>
+    
+</body>
+</html>
